@@ -1,22 +1,19 @@
 <template>
 	<div id="app">
-		<div class="main-app-container">
-			<Todos />
-			<AddTodo />
-		</div>
+		<Header />
+		<router-view />
 	</div>
 </template>
 
 <script>
+import Header from "@/components/Header";
 import { mapActions } from "vuex";
-import Todos from "@/components/Todos";
-import AddTodo from "@/components/AddTodo";
 import axios from "axios";
 
 export default {
+	name: "app",
 	components: {
-		Todos,
-		AddTodo,
+		Header,
 	},
 	methods: {
 		...mapActions(["fetchTodos"]),
@@ -31,21 +28,19 @@ export default {
 	},
 };
 </script>
+
 <style>
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-.main-app-container {
-	margin-top: 20px;
-	margin-left: 5vw;
-	max-width: 80vw;
-}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.4;
 }
+
 .btn {
 	display: inline-block;
 	border: none;
@@ -54,6 +49,7 @@ body {
 	padding: 7px 20px;
 	cursor: pointer;
 }
+
 .btn:hover {
 	background: #666;
 }

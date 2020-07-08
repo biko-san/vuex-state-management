@@ -15,9 +15,10 @@ import axios from "axios";
 export default {
 	props: {
 		todo: Object,
+		index: Number,
 	},
 	methods: {
-		...mapActions(["deleteTask"]),
+		...mapActions(["deleteTask", "completeTask"]),
 		markComplete() {
 			this.todo.completed = !this.todo.completed;
 		},
