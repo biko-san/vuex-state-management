@@ -1,29 +1,29 @@
 <template>
-	<header class="header">
-		<h1>TodoList App</h1>
-		<div id="nav">
-			<router-link to="/">Open Tasks</router-link> |
-			<router-link to="/incomplete">Completed Tasks</router-link>
-		</div>
-	</header>
+  <header class="header">
+    <h1>TodoList App</h1>
+    <div id="nav">
+      <router-link to="/">Open Tasks</router-link> |
+      <router-link to="/incomplete">Completed Tasks</router-link>
+    </div>
+  </header>
 </template>
 
 <script>
 export default {
-	name: "Header",
+  name: "Header"
 };
 </script>
 
 <style scoped>
 .header {
-	background: #333;
-	color: #fff;
-	text-align: center;
-	padding: 10px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 .header a {
-	color: #fff;
-	padding-right: 5px;
-	text-decoration: none;
+  color: #fff;
+  padding-right: 5px;
+  text-decoration: none;
 }
 </style>
